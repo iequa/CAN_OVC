@@ -1,0 +1,538 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="2440" viewBox="0 0 3200 2440">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+  text { font-family: "Segoe UI", Arial, sans-serif; fill: #1b2631; }
+  .title { font-size: 46px; font-weight: 700; }
+  .sub { font-size: 21px; fill: #566573; }
+  .section { font-size: 26px; font-weight: 700; fill: #1f618d; }
+  .box-title { font-size: 21px; font-weight: 700; }
+  .small { font-size: 17px; }
+  .tiny { font-size: 15px; fill: #566573; }
+  .pin { font-size: 16px; }
+  .net { font-size: 16px; font-weight: 700; }
+</style>
+<text x="60" y="72" class="title">CAN_OVC — схема разводки адаптера</text>
+<text x="60" y="108" class="sub">Vectra C full CAN · MS-CAN 95.238 кбит/с · CID/GID + CD70/DVD90 · Ревизия C</text>
+<text x="3140" y="72" class="sub" text-anchor="end" fill="#c0392b" font-weight="700">ТОЛЬКО ПРИЁМ</text>
+<text x="60" y="138" class="tiny" font-weight="700">Обозначения:</text>
+<line x1="190" y1="133" x2="240" y2="133" stroke="#d35400" stroke-width="3"/>
+<text x="248" y="138" class="tiny" fill="#d35400">питание</text>
+<line x1="330" y1="133" x2="380" y2="133" stroke="#2471a3" stroke-width="3"/>
+<text x="388" y="138" class="tiny" fill="#2471a3">CAN</text>
+<line x1="440" y1="133" x2="490" y2="133" stroke="#7d3c98" stroke-width="3"/>
+<text x="498" y="138" class="tiny" fill="#7d3c98">управление / реле</text>
+<line x1="670" y1="133" x2="720" y2="133" stroke="#1e8449" stroke-width="3"/>
+<text x="728" y="138" class="tiny" fill="#1e8449">аудио</text>
+<circle cx="820" cy="133" r="5" fill="#566573"/>
+<text x="832" y="138" class="tiny">соединение</text>
+<text x="960" y="138" class="tiny">пересечение без точки — без соединения</text>
+<rect x="50" y="170" width="1000" height="760" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="72" y="206" class="section">1. ПИТАНИЕ И ЗАЩИТА</text>
+<rect x="1100" y="560" width="680" height="840" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="1122" y="596" class="section">2. ESP32</text>
+<rect x="1900" y="560" width="620" height="400" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="1922" y="596" class="section">3. CAN СО СТОРОНЫ АВТОМОБИЛЯ</text>
+<rect x="1900" y="1020" width="1240" height="620" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="1922" y="1056" class="section">4. ШЛЮЗ / CID / РЕЛЕ</text>
+<rect x="50" y="980" width="1000" height="560" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="72" y="1016" class="section">5. ACC / ЗАЖИГАНИЕ</text>
+<rect x="1100" y="1620" width="1550" height="460" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="1122" y="1656" class="section">6. АУДИО / AUX</text>
+<rect x="50" y="2140" width="3090" height="270" rx="16" fill="none" stroke="#aab7b8" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="72" y="2176" class="section">7. ПРОВЕРКА И ЗАМЕТКИ</text>
+<rect x="90" y="220" width="210" height="120" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="106" y="250" class="box-title">J1 АВТО 12 В</text>
+<text x="106" y="278" class="small" font-size="17">ACC +12 В</text>
+<text x="106" y="301" class="small" font-size="17">GND / масса</text>
+<circle cx="300" cy="260" r="4.5" fill="#2c3e50"/>
+<circle cx="300" cy="310" r="4.5" fill="#2c3e50"/>
+<rect x="360" y="235" width="110" height="60" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="376" y="265" class="box-title">F1</text>
+<text x="376" y="293" class="small" font-size="17">1 А</text>
+<rect x="520" y="220" width="200" height="90" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="536" y="250" class="box-title">Q1</text>
+<text x="536" y="278" class="small" font-size="17">защита от</text>
+<text x="536" y="301" class="small" font-size="17">переполюсовки</text>
+<rect x="810" y="320" width="110" height="90" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="826" y="350" class="box-title">D1</text>
+<text x="826" y="378" class="small" font-size="17">TVS</text>
+<text x="826" y="401" class="small" font-size="17">SMBJ18A</text>
+<circle cx="850" cy="320" r="4.5" fill="#2c3e50"/>
+<circle cx="850" cy="410" r="4.5" fill="#2c3e50"/>
+<polyline points="300,260 360,260" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="470,260 520,260" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="720,260 780,260" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="780" cy="260" r="5" fill="#d35400"/>
+<polyline points="780,260 850,260 850,320" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="850" y1="410" x2="850" y2="422" stroke="#566573" stroke-width="2.5"/>
+<line x1="837" y1="422" x2="863" y2="422" stroke="#566573" stroke-width="2.5"/>
+<line x1="842" y1="427" x2="858" y2="427" stroke="#566573" stroke-width="2.5"/>
+<line x1="847" y1="432" x2="853" y2="432" stroke="#566573" stroke-width="2.5"/>
+<text x="870" y="432" class="tiny">GND</text>
+<polyline points="780,260 980,260 980,300" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="980" cy="300" r="6" fill="#d35400"/>
+<text x="996" y="306" class="small" fill="#d35400" font-weight="700">+12 В (на реле)</text>
+<rect x="120" y="440" width="260" height="140" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="136" y="470" class="box-title">U1 Mini360</text>
+<text x="136" y="498" class="small" font-size="17">12 В → 5 В</text>
+<text x="136" y="521" class="small" font-size="17">3 А, настроить 5.0 В</text>
+<circle cx="120" cy="480" r="4.5" fill="#2c3e50"/>
+<circle cx="380" cy="510" r="4.5" fill="#2c3e50"/>
+<circle cx="250" cy="580" r="4.5" fill="#2c3e50"/>
+<rect x="760" y="440" width="240" height="140" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="776" y="470" class="box-title">U3 MCP1700</text>
+<text x="776" y="498" class="small" font-size="17">5 В → 3.3 В</text>
+<text x="776" y="521" class="small" font-size="17">только для DAC</text>
+<circle cx="760" cy="480" r="4.5" fill="#2c3e50"/>
+<circle cx="1000" cy="510" r="4.5" fill="#2c3e50"/>
+<circle cx="880" cy="580" r="4.5" fill="#2c3e50"/>
+<polyline points="780,260 780,420 100,420 100,620 120,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="120,420 120,480" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="120" cy="420" r="5" fill="#d35400"/>
+<circle cx="120" cy="620" r="5" fill="#d35400"/>
+<polyline points="380,510 420,510 420,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="250,580 250,590 110,590 110,800 120,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="120" cy="800" r="5" fill="#566573"/>
+<polyline points="660,620 660,480 760,480" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="660" cy="600" r="5" fill="#d35400"/>
+<polyline points="1000,510 1030,510 1030,620 1000,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1000" cy="620" r="5" fill="#d35400"/>
+<polyline points="880,580 880,590 710,590 710,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="710" cy="800" r="5" fill="#566573"/>
+<polyline points="120,620 360,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="120,760 360,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="120" y="642" class="small" fill="#d35400" font-weight="700">+12 В</text>
+<polyline points="420,620 660,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="420,760 660,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="420" y="642" class="small" fill="#d35400" font-weight="700">+5 В</text>
+<polyline points="720,620 1000,620" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="720,760 1000,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="720" y="642" class="small" fill="#d35400" font-weight="700">+3.3 В</text>
+<rect x="160" y="650" width="80" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="176" y="680" class="box-title">C1</text>
+<text x="176" y="708" class="small" font-size="15">1000 мкФ</text>
+<text x="176" y="731" class="small" font-size="15">35 В</text>
+<polyline points="200,620 200,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="200,730 200,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="200" cy="620" r="5" fill="#d35400"/>
+<circle cx="200" cy="760" r="5" fill="#566573"/>
+<rect x="260" y="650" width="80" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="276" y="680" class="box-title">C2</text>
+<text x="276" y="708" class="small" font-size="15">100 нФ</text>
+<text x="276" y="731" class="small" font-size="15">50 В</text>
+<polyline points="300,620 300,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="300,730 300,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="300" cy="620" r="5" fill="#d35400"/>
+<circle cx="300" cy="760" r="5" fill="#566573"/>
+<rect x="500" y="650" width="80" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="516" y="680" class="box-title">C3</text>
+<text x="516" y="708" class="small" font-size="15">470 мкФ</text>
+<text x="516" y="731" class="small" font-size="15">16 В</text>
+<polyline points="540,620 540,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="540,730 540,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="540" cy="620" r="5" fill="#d35400"/>
+<circle cx="540" cy="760" r="5" fill="#566573"/>
+<rect x="780" y="650" width="80" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="796" y="680" class="box-title">C4</text>
+<text x="796" y="708" class="small" font-size="15">1 мкФ</text>
+<text x="796" y="731" class="small" font-size="15">25 В</text>
+<polyline points="820,620 820,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="820,730 820,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="820" cy="620" r="5" fill="#d35400"/>
+<circle cx="820" cy="760" r="5" fill="#566573"/>
+<rect x="880" y="650" width="80" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2.5"/>
+<text x="896" y="680" class="box-title">C5</text>
+<text x="896" y="708" class="small" font-size="15">10 мкФ</text>
+<text x="896" y="731" class="small" font-size="15">25 В</text>
+<polyline points="920,620 920,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="920,730 920,760" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="920" cy="620" r="5" fill="#d35400"/>
+<circle cx="920" cy="760" r="5" fill="#566573"/>
+<polyline points="240,760 240,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="540,760 540,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="860,760 860,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="120,800 1020,800" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="120" cy="800" r="5" fill="#566573"/>
+<circle cx="240" cy="800" r="5" fill="#566573"/>
+<circle cx="540" cy="800" r="5" fill="#566573"/>
+<circle cx="710" cy="800" r="5" fill="#566573"/>
+<circle cx="860" cy="800" r="5" fill="#566573"/>
+<line x1="1020" y1="800" x2="1020" y2="812" stroke="#566573" stroke-width="2.5"/>
+<line x1="1007" y1="812" x2="1033" y2="812" stroke="#566573" stroke-width="2.5"/>
+<line x1="1012" y1="817" x2="1028" y2="817" stroke="#566573" stroke-width="2.5"/>
+<line x1="1017" y1="822" x2="1023" y2="822" stroke="#566573" stroke-width="2.5"/>
+<text x="1040" y="822" class="tiny">GND</text>
+<polyline points="660,620 660,600 1080,600 1080,700 1100,700" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="660" cy="620" r="5" fill="#d35400"/>
+<text x="690" y="592" class="small" fill="#d35400" font-weight="700">+5 В → ESP32</text>
+<text x="90" y="880" class="tiny">5 В: ESP32 и MCP2515. 12 В: только катушка реле. 3.3 В: PCM5102A, SN65, TXS, подтяжка ACC.</text>
+<text x="90" y="904" class="tiny">Керамика — X7R на 50 В; электролиты 105 °C. C1 — 35–50 В, C3 — 16 В.</text>
+<rect x="1100" y="600" width="680" height="760" rx="12" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2.5"/>
+<text x="1120" y="640" class="box-title">ESP32 DevKit · 4 МБ</text>
+<text x="1120" y="668" class="tiny">питание 5 В / GND, лог 3.3 В</text>
+<text x="1120" y="706" class="pin">5 В</text>
+<circle cx="1100" cy="700" r="4.5" fill="#2c3e50"/>
+<text x="1120" y="756" class="pin">GND</text>
+<circle cx="1100" cy="750" r="4.5" fill="#2c3e50"/>
+<text x="1120" y="806" class="pin">3.3 В</text>
+<circle cx="1100" cy="800" r="4.5" fill="#2c3e50"/>
+<text x="1120" y="986" class="pin">GPIO34</text>
+<circle cx="1100" cy="980" r="4.5" fill="#2c3e50"/>
+<text x="1120" y="1066" class="pin">GPIO32</text>
+<circle cx="1100" cy="1060" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="686" class="pin" text-anchor="end">GPIO17 CAN_TX</text>
+<circle cx="1780" cy="680" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="736" class="pin" text-anchor="end">GPIO16 CAN_RX</text>
+<circle cx="1780" cy="730" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="866" class="pin" text-anchor="end">GPIO18 SPI_SCK</text>
+<circle cx="1780" cy="860" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="911" class="pin" text-anchor="end">GPIO19 SPI_MISO</text>
+<circle cx="1780" cy="905" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="956" class="pin" text-anchor="end">GPIO23 SPI_MOSI</text>
+<circle cx="1780" cy="950" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="1001" class="pin" text-anchor="end">GPIO21 SPI_CS</text>
+<circle cx="1780" cy="995" r="4.5" fill="#2c3e50"/>
+<text x="1760" y="1046" class="pin" text-anchor="end">GPIO22 MCP_INT</text>
+<circle cx="1780" cy="1040" r="4.5" fill="#2c3e50"/>
+<text x="1240" y="1345" class="pin" text-anchor="middle" font-size="15">GPIO26 BCLK</text>
+<circle cx="1240" cy="1360" r="4.5" fill="#2c3e50"/>
+<line x1="1240" y1="1360" x2="1240" y2="1390" stroke="#2c3e50" stroke-width="2"/>
+<text x="1350" y="1345" class="pin" text-anchor="middle" font-size="15">GPIO25 LRCK</text>
+<circle cx="1350" cy="1360" r="4.5" fill="#2c3e50"/>
+<line x1="1350" y1="1360" x2="1350" y2="1390" stroke="#2c3e50" stroke-width="2"/>
+<text x="1460" y="1345" class="pin" text-anchor="middle" font-size="15">GPIO27 DIN</text>
+<circle cx="1460" cy="1360" r="4.5" fill="#2c3e50"/>
+<line x1="1460" y1="1360" x2="1460" y2="1390" stroke="#2c3e50" stroke-width="2"/>
+<polyline points="1100,700 1080,700" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="1070" y1="750" x2="1070" y2="762" stroke="#566573" stroke-width="2.5"/>
+<line x1="1057" y1="762" x2="1083" y2="762" stroke="#566573" stroke-width="2.5"/>
+<line x1="1062" y1="767" x2="1078" y2="767" stroke="#566573" stroke-width="2.5"/>
+<line x1="1067" y1="772" x2="1073" y2="772" stroke="#566573" stroke-width="2.5"/>
+<polyline points="1100,750 1070,750" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1100,800 1075,800 1075,762" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1075,760 1069,772 1081,772" fill="#d35400"/>
+<text x="1055" y="758" class="small" text-anchor="end" fill="#d35400" font-weight="700">3.3 В</text>
+<rect x="1900" y="620" width="250" height="200" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2.5"/>
+<text x="1916" y="650" class="box-title">U4 SN65HVD230</text>
+<text x="1916" y="678" class="small" font-size="17">сторона авто</text>
+<text x="1916" y="701" class="small" font-size="17">VCC 3.3 В</text>
+<text x="1916" y="724" class="small" font-size="17">120 Ом удалить</text>
+<text x="1916" y="747" class="small" font-size="17">RS → GND</text>
+<circle cx="1900" cy="650" r="4.5" fill="#2c3e50"/>
+<circle cx="1900" cy="680" r="4.5" fill="#2c3e50"/>
+<circle cx="1900" cy="730" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="720" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="770" r="4.5" fill="#2c3e50"/>
+<circle cx="1950" cy="820" r="4.5" fill="#2c3e50"/>
+<text x="1888" y="674" class="pin" text-anchor="end">TXD</text>
+<text x="1888" y="724" class="pin" text-anchor="end">RXD</text>
+<text x="2162" y="714" class="pin">CANH</text>
+<text x="2162" y="764" class="pin">CANL</text>
+<polyline points="1780,680 1900,680" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1780,730 1900,730" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1860,650 1900,650" fill="none" stroke="#d35400" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1900,650 1888,644 1888,656" fill="#d35400"/>
+<text x="1848" y="645" class="small" text-anchor="end" fill="#d35400" font-weight="700">3.3 В</text>
+<line x1="1950" y1="820" x2="1950" y2="832" stroke="#566573" stroke-width="2.5"/>
+<line x1="1937" y1="832" x2="1963" y2="832" stroke="#566573" stroke-width="2.5"/>
+<line x1="1942" y1="837" x2="1958" y2="837" stroke="#566573" stroke-width="2.5"/>
+<line x1="1947" y1="842" x2="1953" y2="842" stroke="#566573" stroke-width="2.5"/>
+<text x="1970" y="842" class="tiny">GND</text>
+<rect x="2230" y="640" width="220" height="160" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2.5"/>
+<text x="2246" y="670" class="box-title">J2 MS-CAN АВТО</text>
+<text x="2246" y="698" class="small" font-size="17">OBD 3 (H)</text>
+<text x="2246" y="721" class="small" font-size="17">OBD 11 (L)</text>
+<text x="2246" y="744" class="small" font-size="17">или CID 19/20</text>
+<circle cx="2230" cy="700" r="4.5" fill="#2c3e50"/>
+<circle cx="2230" cy="750" r="4.5" fill="#2c3e50"/>
+<circle cx="2450" cy="700" r="4.5" fill="#2c3e50"/>
+<circle cx="2450" cy="750" r="4.5" fill="#2c3e50"/>
+<polyline points="2150,720 2190,720 2190,700 2230,700" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,770 2210,770 2210,750 2230,750" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1900" y="900" class="tiny">Шина авто уже терминирована. Не подключать обе пары MS-CAN.</text>
+<rect x="1900" y="1100" width="250" height="240" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="1916" y="1130" class="box-title">U5 TXS0108E</text>
+<circle cx="1900" cy="1150" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="1150" r="4.5" fill="#2c3e50"/>
+<text x="1912" y="1156" class="pin">A1 SCK</text>
+<text x="2138" y="1156" class="pin" text-anchor="end">B1</text>
+<circle cx="1900" cy="1190" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="1190" r="4.5" fill="#2c3e50"/>
+<text x="1912" y="1196" class="pin">A2 MISO</text>
+<text x="2138" y="1196" class="pin" text-anchor="end">B2</text>
+<circle cx="1900" cy="1230" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="1230" r="4.5" fill="#2c3e50"/>
+<text x="1912" y="1236" class="pin">A3 MOSI</text>
+<text x="2138" y="1236" class="pin" text-anchor="end">B3</text>
+<circle cx="1900" cy="1270" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="1270" r="4.5" fill="#2c3e50"/>
+<text x="1912" y="1276" class="pin">A4 CS</text>
+<text x="2138" y="1276" class="pin" text-anchor="end">B4</text>
+<circle cx="1900" cy="1310" r="4.5" fill="#2c3e50"/>
+<circle cx="2150" cy="1310" r="4.5" fill="#2c3e50"/>
+<text x="1912" y="1316" class="pin">A5 INT</text>
+<text x="2138" y="1316" class="pin" text-anchor="end">B5</text>
+<text x="2025" y="1334" class="tiny" text-anchor="middle">сдвиг 3.3 В ↔ 5 В</text>
+<circle cx="1950" cy="1100" r="4.5" fill="#2c3e50"/>
+<circle cx="1950" cy="1340" r="4.5" fill="#2c3e50"/>
+<line x1="1950" y1="1100" x2="1950" y2="1074" stroke="#d35400" stroke-width="2.5"/>
+<polygon points="1950,1072 1944,1084 1956,1084" fill="#d35400"/>
+<text x="1962" y="1082" class="small" fill="#d35400" font-weight="700">5 В (VB)</text>
+<line x1="2050" y1="1100" x2="2050" y2="1074" stroke="#d35400" stroke-width="2.5"/>
+<polygon points="2050,1072 2044,1084 2056,1084" fill="#d35400"/>
+<text x="2062" y="1082" class="small" fill="#d35400" font-weight="700">3.3 В (VA)</text>
+<line x1="1950" y1="1340" x2="1950" y2="1352" stroke="#566573" stroke-width="2.5"/>
+<line x1="1937" y1="1352" x2="1963" y2="1352" stroke="#566573" stroke-width="2.5"/>
+<line x1="1942" y1="1357" x2="1958" y2="1357" stroke="#566573" stroke-width="2.5"/>
+<line x1="1947" y1="1362" x2="1953" y2="1362" stroke="#566573" stroke-width="2.5"/>
+<text x="1970" y="1362" class="tiny">GND</text>
+<rect x="2230" y="1100" width="250" height="240" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2.5"/>
+<text x="2246" y="1130" class="box-title">U6 MCP2515 + TJA1050</text>
+<circle cx="2230" cy="1150" r="4.5" fill="#2c3e50"/>
+<text x="2242" y="1156" class="pin">SCK</text>
+<circle cx="2230" cy="1190" r="4.5" fill="#2c3e50"/>
+<text x="2242" y="1196" class="pin">MISO</text>
+<circle cx="2230" cy="1230" r="4.5" fill="#2c3e50"/>
+<text x="2242" y="1236" class="pin">MOSI</text>
+<circle cx="2230" cy="1270" r="4.5" fill="#2c3e50"/>
+<text x="2242" y="1276" class="pin">CS</text>
+<circle cx="2230" cy="1310" r="4.5" fill="#2c3e50"/>
+<text x="2242" y="1316" class="pin">INT</text>
+<circle cx="2480" cy="1180" r="4.5" fill="#2c3e50"/>
+<circle cx="2480" cy="1230" r="4.5" fill="#2c3e50"/>
+<text x="2468" y="1174" class="pin" text-anchor="end">CANH</text>
+<text x="2468" y="1224" class="pin" text-anchor="end">CANL</text>
+<text x="2242" y="1334" class="tiny">VDD 5 В · 120 Ом</text>
+<circle cx="2280" cy="1100" r="4.5" fill="#2c3e50"/>
+<circle cx="2280" cy="1340" r="4.5" fill="#2c3e50"/>
+<line x1="2280" y1="1100" x2="2280" y2="1074" stroke="#d35400" stroke-width="2.5"/>
+<polygon points="2280,1072 2274,1084 2286,1084" fill="#d35400"/>
+<text x="2292" y="1082" class="small" fill="#d35400" font-weight="700">5 В</text>
+<line x1="2280" y1="1340" x2="2280" y2="1352" stroke="#566573" stroke-width="2.5"/>
+<line x1="2267" y1="1352" x2="2293" y2="1352" stroke="#566573" stroke-width="2.5"/>
+<line x1="2272" y1="1357" x2="2288" y2="1357" stroke="#566573" stroke-width="2.5"/>
+<line x1="2277" y1="1362" x2="2283" y2="1362" stroke="#566573" stroke-width="2.5"/>
+<text x="2300" y="1362" class="tiny">GND</text>
+<polyline points="1780,860 1860,860 1860,1150 1900,1150" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1780,905 1845,905 1845,1190 1900,1190" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1780,950 1830,950 1830,1230 1900,1230" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1780,995 1815,995 1815,1270 1900,1270" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1780,1040 1800,1040 1800,1310 1900,1310" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,1150 2230,1150" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,1190 2230,1190" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,1230 2230,1230" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,1270 2230,1270" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2150,1310 2230,1310" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2480,1180 2540,1180 2540,1200 2600,1200" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2480,1230 2570,1230 2570,1250 2600,1250" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2600" y="1050" width="300" height="300" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="2616" y="1080" class="box-title">K1 Fujitsu RY12W-K</text>
+<text x="2616" y="1108" class="small" font-size="17">DPDT, 2 перекидных</text>
+<text x="2616" y="1131" class="small" font-size="17">катушка 12 В / 960 Ом</text>
+<text x="2616" y="1154" class="small" font-size="17">NC — bypass</text>
+<text x="2616" y="1177" class="small" font-size="17">NO — через шлюз</text>
+<text x="2616" y="1200" class="small" font-size="17">coil+ / coil− — снизу</text>
+<circle cx="2700" cy="1050" r="4.5" fill="#2c3e50"/>
+<circle cx="2750" cy="1050" r="4.5" fill="#2c3e50"/>
+<circle cx="2600" cy="1200" r="4.5" fill="#2c3e50"/>
+<circle cx="2600" cy="1250" r="4.5" fill="#2c3e50"/>
+<circle cx="2900" cy="1150" r="4.5" fill="#2c3e50"/>
+<circle cx="2900" cy="1200" r="4.5" fill="#2c3e50"/>
+<circle cx="2650" cy="1350" r="4.5" fill="#2c3e50"/>
+<circle cx="2750" cy="1350" r="4.5" fill="#2c3e50"/>
+<text x="2694" y="1022" class="pin" text-anchor="end">NC1</text>
+<text x="2756" y="1022" class="pin">NC2</text>
+<text x="2588" y="1194" class="pin" text-anchor="end">NO1</text>
+<text x="2588" y="1244" class="pin" text-anchor="end">NO2</text>
+<text x="2912" y="1144" class="pin">COM1</text>
+<text x="2912" y="1194" class="pin">COM2</text>
+<text x="2640" y="1372" class="pin" text-anchor="end">coil+</text>
+<text x="2760" y="1372" class="pin">coil−</text>
+<polyline points="2450,700 2650,700 2650,1030 2700,1030 2700,1050" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2450,750 2600,750 2600,1010 2750,1010 2750,1050" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="2470" y="690" class="tiny" fill="#2471a3">H</text>
+<text x="2470" y="740" class="tiny" fill="#2471a3">L</text>
+<polyline points="2900,1150 2980,1150" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2900,1200 2980,1200" fill="none" stroke="#2471a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2980" y="1120" width="150" height="140" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2.5"/>
+<text x="2996" y="1150" class="box-title">J3 CID CAN</text>
+<text x="2996" y="1178" class="small" font-size="17">H</text>
+<text x="2996" y="1201" class="small" font-size="17">L</text>
+<text x="2996" y="1224" class="small" font-size="17">120 Ом внутри</text>
+<circle cx="2980" cy="1150" r="4.5" fill="#2c3e50"/>
+<circle cx="2980" cy="1200" r="4.5" fill="#2c3e50"/>
+<text x="2640" y="1360" class="tiny" text-anchor="end" fill="#7d3c98">coil+</text>
+<text x="2760" y="1360" class="tiny" fill="#7d3c98">coil−</text>
+<polygon points="2650,1352 2644,1364 2656,1364" fill="#7d3c98"/>
+<polyline points="2650,1420 2650,1350" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2650" cy="1420" r="5" fill="#7d3c98"/>
+<text x="2638" y="1414" class="small" text-anchor="end" fill="#7d3c98" font-weight="700">+12 В</text>
+<polyline points="2750,1350 2750,1440" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2680" y="1365" width="60" height="60" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="2696" y="1395" class="box-title">D2</text>
+<text x="2696" y="1423" class="small" font-size="13">1N4007</text>
+<circle cx="2710" cy="1365" r="4.5" fill="#2c3e50"/>
+<circle cx="2710" cy="1425" r="4.5" fill="#2c3e50"/>
+<polyline points="2650,1365 2710,1365" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2710,1425 2750,1425" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2650" cy="1365" r="5" fill="#7d3c98"/>
+<circle cx="2750" cy="1425" r="5" fill="#7d3c98"/>
+<rect x="2700" y="1440" width="100" height="90" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="2716" y="1470" class="box-title">Q2</text>
+<text x="2716" y="1498" class="small" font-size="15">2N2222</text>
+<text x="2716" y="1521" class="small" font-size="15">NPN</text>
+<circle cx="2750" cy="1440" r="4.5" fill="#2c3e50"/>
+<circle cx="2700" cy="1480" r="4.5" fill="#2c3e50"/>
+<circle cx="2750" cy="1530" r="4.5" fill="#2c3e50"/>
+<line x1="2750" y1="1530" x2="2750" y2="1542" stroke="#566573" stroke-width="2.5"/>
+<line x1="2737" y1="1542" x2="2763" y2="1542" stroke="#566573" stroke-width="2.5"/>
+<line x1="2742" y1="1547" x2="2758" y2="1547" stroke="#566573" stroke-width="2.5"/>
+<line x1="2747" y1="1552" x2="2753" y2="1552" stroke="#566573" stroke-width="2.5"/>
+<text x="2770" y="1552" class="tiny">GND</text>
+<rect x="2560" y="1455" width="90" height="60" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="2576" y="1485" class="box-title">R3</text>
+<text x="2576" y="1513" class="small" font-size="15">1 кОм</text>
+<circle cx="2560" cy="1480" r="4.5" fill="#2c3e50"/>
+<circle cx="2650" cy="1480" r="4.5" fill="#2c3e50"/>
+<polyline points="2650,1480 2700,1480" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1100,1060 1070,1060 1070,1480 2560,1480" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="2400" y="1472" class="tiny" text-anchor="end" fill="#7d3c98">GPIO32 → драйвер реле</text>
+<text x="1900" y="1628" class="tiny">Реле обесточено — CID напрямую к авто. Включено — CID через шлюз.</text>
+<rect x="90" y="1040" width="210" height="120" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="106" y="1070" class="box-title">J5 ACC</text>
+<text x="106" y="1098" class="small" font-size="17">12 В зажигания</text>
+<text x="106" y="1121" class="small" font-size="17">GND</text>
+<circle cx="300" cy="1080" r="4.5" fill="#2c3e50"/>
+<circle cx="300" cy="1120" r="4.5" fill="#2c3e50"/>
+<rect x="350" y="1055" width="100" height="50" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="366" y="1085" class="box-title">R1</text>
+<text x="366" y="1113" class="small" font-size="17">4.7 кОм</text>
+<circle cx="350" cy="1080" r="4.5" fill="#2c3e50"/>
+<circle cx="450" cy="1080" r="4.5" fill="#2c3e50"/>
+<rect x="500" y="1030" width="220" height="140" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="516" y="1060" class="box-title">U8 PC817</text>
+<text x="516" y="1088" class="small" font-size="17">LED 1–2</text>
+<text x="516" y="1111" class="small" font-size="17">выход 4–3</text>
+<text x="516" y="1134" class="small" font-size="17">оптрон</text>
+<circle cx="500" cy="1080" r="4.5" fill="#2c3e50"/>
+<circle cx="500" cy="1130" r="4.5" fill="#2c3e50"/>
+<circle cx="720" cy="1080" r="4.5" fill="#2c3e50"/>
+<circle cx="720" cy="1130" r="4.5" fill="#2c3e50"/>
+<rect x="780" y="1000" width="70" height="80" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="796" y="1030" class="box-title">R2</text>
+<text x="796" y="1058" class="small" font-size="17">10 кОм</text>
+<circle cx="815" cy="1000" r="4.5" fill="#2c3e50"/>
+<circle cx="815" cy="1080" r="4.5" fill="#2c3e50"/>
+<rect x="780" y="1150" width="70" height="80" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2.5"/>
+<text x="796" y="1180" class="box-title">C6</text>
+<text x="796" y="1208" class="small" font-size="17">100 нФ</text>
+<circle cx="815" cy="1150" r="4.5" fill="#2c3e50"/>
+<circle cx="815" cy="1230" r="4.5" fill="#2c3e50"/>
+<polyline points="300,1080 350,1080" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="450,1080 500,1080" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="720,1080 815,1080" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="815" cy="1080" r="5" fill="#7d3c98"/>
+<polyline points="815,1150 815,1080" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="815,1080 900,1080 900,980 1100,980" fill="none" stroke="#7d3c98" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="905" y="970" class="tiny" fill="#7d3c98">GPIO34</text>
+<line x1="815" y1="1000" x2="815" y2="974" stroke="#d35400" stroke-width="2.5"/>
+<polygon points="815,972 809,984 821,984" fill="#d35400"/>
+<text x="827" y="982" class="small" fill="#d35400" font-weight="700">+3.3 В</text>
+<polyline points="300,1120 300,1300" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="500,1130 470,1130 470,1300" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="720,1130 720,1300" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="815,1230 815,1300" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="300,1300 900,1300" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="470" cy="1300" r="5" fill="#566573"/>
+<circle cx="720" cy="1300" r="5" fill="#566573"/>
+<circle cx="815" cy="1300" r="5" fill="#566573"/>
+<line x1="900" y1="1300" x2="900" y2="1312" stroke="#566573" stroke-width="2.5"/>
+<line x1="887" y1="1312" x2="913" y2="1312" stroke="#566573" stroke-width="2.5"/>
+<line x1="892" y1="1317" x2="908" y2="1317" stroke="#566573" stroke-width="2.5"/>
+<line x1="897" y1="1322" x2="903" y2="1322" stroke="#566573" stroke-width="2.5"/>
+<text x="920" y="1322" class="tiny">GND</text>
+<text x="90" y="1370" class="small">ACC = 12 В → LED открыт → фототранзистор открыт → GPIO34 = LOW.</text>
+<text x="90" y="1398" class="small">R1 задаёт ~2.3 мА через LED. R2 — подтяжка к 3.3 В. C6 — фильтр помех.</text>
+<text x="90" y="1426" class="small">Оптрон развязывает 12 В и GPIO34: на входе ESP32 нет 12 В и выбросов.</text>
+<text x="90" y="1454" class="small">В прошивке учесть инверсию и антидребезг 200–500 мс.</text>
+<rect x="1500" y="1660" width="300" height="240" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2.5"/>
+<text x="1516" y="1690" class="box-title">U7 PCM5102A</text>
+<text x="1516" y="1718" class="small" font-size="17">3.3 В (чистый LDO)</text>
+<text x="1516" y="1741" class="small" font-size="17">GND</text>
+<text x="1516" y="1764" class="small" font-size="17">BCLK / LRCK / DIN</text>
+<text x="1516" y="1787" class="small" font-size="17">MCLK → GND</text>
+<text x="1516" y="1810" class="small" font-size="17">Left / Right</text>
+<circle cx="1500" cy="1700" r="4.5" fill="#2c3e50"/>
+<circle cx="1500" cy="1750" r="4.5" fill="#2c3e50"/>
+<circle cx="1500" cy="1800" r="4.5" fill="#2c3e50"/>
+<circle cx="1800" cy="1740" r="4.5" fill="#2c3e50"/>
+<circle cx="1800" cy="1790" r="4.5" fill="#2c3e50"/>
+<circle cx="1800" cy="1840" r="4.5" fill="#2c3e50"/>
+<circle cx="1650" cy="1660" r="4.5" fill="#2c3e50"/>
+<circle cx="1650" cy="1900" r="4.5" fill="#2c3e50"/>
+<line x1="1650" y1="1660" x2="1650" y2="1634" stroke="#d35400" stroke-width="2.5"/>
+<polygon points="1650,1632 1644,1644 1656,1644" fill="#d35400"/>
+<text x="1662" y="1642" class="small" fill="#d35400" font-weight="700">3.3 В (MCP1700)</text>
+<line x1="1650" y1="1900" x2="1650" y2="1912" stroke="#566573" stroke-width="2.5"/>
+<line x1="1637" y1="1912" x2="1663" y2="1912" stroke="#566573" stroke-width="2.5"/>
+<line x1="1642" y1="1917" x2="1658" y2="1917" stroke="#566573" stroke-width="2.5"/>
+<line x1="1647" y1="1922" x2="1653" y2="1922" stroke="#566573" stroke-width="2.5"/>
+<text x="1670" y="1922" class="tiny">GND</text>
+<polyline points="1240,1390 1240,1700 1500,1700" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1350,1390 1350,1750 1500,1750" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1460,1390 1460,1800 1500,1800" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1900" y="1660" width="300" height="240" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2.5"/>
+<text x="1916" y="1690" class="box-title">Делитель 2:1</text>
+<text x="1916" y="1718" class="small" font-size="17">C7/C8 10 мкФ 25 В</text>
+<text x="1916" y="1741" class="small" font-size="17">R4/R5 10 кОм</text>
+<text x="1916" y="1764" class="small" font-size="17">R6/R7 10 кОм → GND</text>
+<text x="1916" y="1787" class="small" font-size="17">на каждый канал</text>
+<circle cx="1900" cy="1740" r="4.5" fill="#2c3e50"/>
+<circle cx="1900" cy="1790" r="4.5" fill="#2c3e50"/>
+<circle cx="1900" cy="1840" r="4.5" fill="#2c3e50"/>
+<circle cx="2200" cy="1740" r="4.5" fill="#2c3e50"/>
+<circle cx="2200" cy="1790" r="4.5" fill="#2c3e50"/>
+<circle cx="2200" cy="1840" r="4.5" fill="#2c3e50"/>
+<circle cx="2050" cy="1900" r="4.5" fill="#2c3e50"/>
+<circle cx="2050" cy="1660" r="4.5" fill="#2c3e50"/>
+<polyline points="1800,1740 1900,1740" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1800,1790 1900,1790" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1800,1840 1900,1840" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2300" y="1680" width="320" height="200" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2.5"/>
+<text x="2316" y="1710" class="box-title">J4 AUX МАГНИТОЛЫ</text>
+<text x="2316" y="1738" class="small" font-size="17">L</text>
+<text x="2316" y="1761" class="small" font-size="17">R</text>
+<text x="2316" y="1784" class="small" font-size="17">GND</text>
+<text x="2316" y="1807" class="small" font-size="17">проверить pinout</text>
+<circle cx="2300" cy="1740" r="4.5" fill="#2c3e50"/>
+<circle cx="2300" cy="1790" r="4.5" fill="#2c3e50"/>
+<circle cx="2300" cy="1840" r="4.5" fill="#2c3e50"/>
+<polyline points="2200,1740 2300,1740" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2200,1790 2300,1790" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2200,1840 2300,1840" fill="none" stroke="#1e8449" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1650,1900 1650,1960" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2050,1900 2050,1960" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1550,1960 2100,1960" fill="none" stroke="#566573" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1650" cy="1960" r="5" fill="#566573"/>
+<circle cx="2050" cy="1960" r="5" fill="#566573"/>
+<line x1="1550" y1="1960" x2="1550" y2="1972" stroke="#566573" stroke-width="2.5"/>
+<line x1="1537" y1="1972" x2="1563" y2="1972" stroke="#566573" stroke-width="2.5"/>
+<line x1="1542" y1="1977" x2="1558" y2="1977" stroke="#566573" stroke-width="2.5"/>
+<line x1="1547" y1="1982" x2="1553" y2="1982" stroke="#566573" stroke-width="2.5"/>
+<text x="1570" y="1982" class="tiny">GND (аудио)</text>
+<text x="1500" y="2035" class="tiny">PCM5102A: только 3.3 В, MCLK → GND. Выход ~2 В RMS; AUX обычно 0.5–1 В RMS.</text>
+<text x="1500" y="2060" class="tiny">C7/C8 — разделительные, R4/R6 и R5/R7 — делитель 2:1 на каждый канал.</text>
+<text x="80" y="2200" class="small">• Питание: 12 В → F1 1 А → Q1 (защита) → D1 (TVS) → Mini360 5 В → MCP1700 3.3 В.</text>
+<text x="80" y="2226" class="small">• Проверить 5.0 В и 3.3 В мультиметром до подключения ESP32 и модулей.</text>
+<text x="80" y="2252" class="small">• Общая земля обязательна; аудиоземлю вести отдельно от силовой.</text>
+<text x="80" y="2278" class="small">• SN65HVD230: выпаять 120 Ом, RS → GND. Шина авто уже терминирована.</text>
+<text x="80" y="2304" class="small">• MCP2515: 120 Ом на модуле + 120 Ом CID ≈ 60 Ом при включённом реле.</text>
+<text x="80" y="2330" class="small">• TXS0108E обязателен: MCP2515 работает с 5-вольтовой логикой.</text>
+<text x="1580" y="2200" class="small">• Реле обесточено (GPIO32 = 0) — CID напрямую к авто, безопасный bypass.</text>
+<text x="1580" y="2226" class="small">• K1 RY12W-K: DPDT, катушка 12 В / 960 Ом (12.5 мА), контакты 1 А.</text>
+<text x="1580" y="2252" class="small">• Первый запуск в авто: только приём, без 0x691 и 0x6C1.</text>
+<text x="1580" y="2278" class="small">• Снять лог 0x6C1, 0x691, 0x501, 0x201, 0x206, 0x506.</text>
+<text x="1580" y="2304" class="small">• Проверить AUX на CD70/DVD90; если AUX нет — нужно другое решение.</text>
+<text x="1580" y="2330" class="small">• Реле RY12W-K не коммутирует питание, только сигнальные CAN H/L.</text>
+<text x="60" y="2396" class="tiny">Файл: docs/wiring_rus_v2.svg · Подробные таблицы и BOM: docs/WIRING_rus_v2.md</text>
+</svg>

@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1400" viewBox="0 0 1900 1400">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+  text { font-family: "Segoe UI", Arial, sans-serif; fill: #1b2631; }
+  .title { font-size: 32px; font-weight: 700; }
+  .sub { font-size: 15px; fill: #566573; }
+  .section { font-size: 19px; font-weight: 700; fill: #1f618d; }
+  .box-title { font-size: 15px; font-weight: 700; }
+  .small { font-size: 12px; }
+  .tiny { font-size: 11px; fill: #566573; }
+  .power { stroke: #d35400; }
+  .can { stroke: #2471a3; }
+  .audio { stroke: #1e8449; }
+  .ctrl { stroke: #7d3c98; }
+  .net { font-size: 12px; font-weight: 700; fill: #7f8c8d; }
+</style>
+<text x="40" y="48" class="title">CAN_OVC — схема разводки адаптера</text>
+<text x="40" y="78" class="sub">Vectra C full CAN · MS-CAN 95.238 kbit/s · CID/GID + CD70/DVD90 · Rev A 2026-10-31</text>
+<text x="1660" y="48" class="sub" fill="#c0392b" font-weight="700">listen-only</text>
+<rect x="30" y="100" width="650" height="450" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="128" class="section">1. ПИТАНИЕ И ЗАЩИТА</text>
+<rect x="700" y="100" width="330" height="520" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="716" y="128" class="section">2. ESP32</text>
+<rect x="1060" y="100" width="500" height="250" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="1076" y="128" class="section">3. CAN СО СТОРОНЫ АВТО</text>
+<rect x="1060" y="360" width="810" height="330" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="1076" y="388" class="section">4. GATEWAY / CID</text>
+<rect x="30" y="620" width="630" height="220" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="648" class="section">5. ACC / ЗАЖИГАНИЕ</text>
+<rect x="700" y="660" width="800" height="310" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="716" y="688" class="section">6. AUDIO / AUX</text>
+<rect x="30" y="1000" width="1840" height="350" rx="14" fill="none" stroke="#aab7b8" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="1028" class="section">7. ПРОВЕРКА И ЗАМЕТКИ</text>
+<rect x="50" y="150" width="160" height="70" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="62" y="174" class="box-title">J1</text>
+<text x="62" y="196" class="small">CAR 12V ACC</text>
+<text x="62" y="214" class="small">GND</text>
+<rect x="240" y="160" width="70" height="50" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="252" y="184" class="box-title">F1</text>
+<text x="252" y="206" class="small">1A</text>
+<rect x="330" y="160" width="75" height="50" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="342" y="184" class="box-title">D1</text>
+<text x="342" y="206" class="small">TVS 18V</text>
+<rect x="430" y="160" width="100" height="50" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="442" y="184" class="box-title">Q1</text>
+<text x="442" y="206" class="small">reverse prot.</text>
+<rect x="50" y="260" width="190" height="90" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="62" y="284" class="box-title">U1 Mini360 #1</text>
+<text x="62" y="306" class="small">12V -&gt; 5.0V</text>
+<text x="62" y="324" class="small">3A</text>
+<text x="62" y="342" class="small">set exactly 5.0V</text>
+<rect x="270" y="260" width="190" height="90" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="282" y="284" class="box-title">U2 Mini360 #2</text>
+<text x="282" y="306" class="small">spare / second 5V rail</text>
+<rect x="270" y="390" width="190" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="282" y="414" class="box-title">U3 MCP1700</text>
+<text x="282" y="436" class="small">5V -&gt; 3.3V</text>
+<text x="282" y="454" class="small">DAC only</text>
+<rect x="50" y="390" width="90" height="60" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="62" y="414" class="box-title">C1</text>
+<text x="62" y="436" class="small">1000uF</text>
+<text x="62" y="454" class="small">25V</text>
+<rect x="150" y="390" width="90" height="60" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="162" y="414" class="box-title">C2</text>
+<text x="162" y="436" class="small">100nF</text>
+<rect x="50" y="475" width="120" height="50" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="62" y="499" class="box-title">C3</text>
+<text x="62" y="521" class="small">470uF/10V</text>
+<rect x="470" y="390" width="120" height="80" rx="10" fill="#fbfcfc" stroke="#d35400" stroke-width="2"/>
+<text x="482" y="414" class="box-title">C4/C5</text>
+<text x="482" y="436" class="small">1uF in</text>
+<text x="482" y="454" class="small">10uF+100nF</text>
+<polyline points="210,185 240,185" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="310,185 330,185" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="405,185 430,185" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="530,185 560,185 560,240 145,240 145,260" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="560" y="232" class="net" fill="#d35400">+12V</text>
+<polyline points="145,350 145,390 270,390" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="150" y="382" class="net" fill="#d35400">+5V rail</text>
+<polyline points="460,430 470,430" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="470" y="380" class="net" fill="#d35400">+3.3V rail</text>
+<text x="50" y="535" class="tiny">5V: ESP32, MCP2515, relay coil.   3.3V: PCM5102A only (clean LDO).</text>
+<rect x="720" y="150" width="290" height="440" rx="12" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+<text x="735" y="178" class="box-title">ESP32 DevKit classic</text>
+<text x="735" y="196" class="tiny">4 MB flash · USB</text>
+<text x="735" y="190" class="small">5V</text>
+<circle cx="720" cy="186" r="3" fill="#2c3e50"/>
+<text x="735" y="220" class="small">GND</text>
+<circle cx="720" cy="216" r="3" fill="#2c3e50"/>
+<text x="735" y="250" class="small">3V3</text>
+<circle cx="720" cy="246" r="3" fill="#2c3e50"/>
+<text x="735" y="310" class="small">GPIO34</text>
+<circle cx="720" cy="306" r="3" fill="#2c3e50"/>
+<text x="735" y="340" class="small">GPIO32</text>
+<circle cx="720" cy="336" r="3" fill="#2c3e50"/>
+<text x="995" y="180" class="small" text-anchor="end">GPIO17 CAN_TX</text>
+<circle cx="1010" cy="176" r="3" fill="#2c3e50"/>
+<text x="995" y="210" class="small" text-anchor="end">GPIO16 CAN_RX</text>
+<circle cx="1010" cy="206" r="3" fill="#2c3e50"/>
+<text x="995" y="270" class="small" text-anchor="end">GPIO18 SPI_SCK</text>
+<circle cx="1010" cy="266" r="3" fill="#2c3e50"/>
+<text x="995" y="300" class="small" text-anchor="end">GPIO19 SPI_MISO</text>
+<circle cx="1010" cy="296" r="3" fill="#2c3e50"/>
+<text x="995" y="330" class="small" text-anchor="end">GPIO23 SPI_MOSI</text>
+<circle cx="1010" cy="326" r="3" fill="#2c3e50"/>
+<text x="995" y="360" class="small" text-anchor="end">GPIO21 SPI_CS</text>
+<circle cx="1010" cy="356" r="3" fill="#2c3e50"/>
+<text x="995" y="390" class="small" text-anchor="end">GPIO22 MCP_INT</text>
+<circle cx="1010" cy="386" r="3" fill="#2c3e50"/>
+<text x="995" y="450" class="small" text-anchor="end">GPIO26 I2S_BCLK</text>
+<circle cx="1010" cy="446" r="3" fill="#2c3e50"/>
+<text x="995" y="480" class="small" text-anchor="end">GPIO25 I2S_LRCK</text>
+<circle cx="1010" cy="476" r="3" fill="#2c3e50"/>
+<text x="995" y="510" class="small" text-anchor="end">GPIO27 I2S_DATA</text>
+<circle cx="1010" cy="506" r="3" fill="#2c3e50"/>
+<rect x="1080" y="145" width="210" height="140" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2"/>
+<text x="1092" y="169" class="box-title">U4 SN65HVD230</text>
+<text x="1092" y="191" class="small">car side</text>
+<text x="1092" y="209" class="small">VCC 3.3V</text>
+<text x="1092" y="227" class="small">TXD/RXD -&gt; ESP32</text>
+<text x="1092" y="245" class="small">CANH/L -&gt; J2</text>
+<text x="1092" y="263" class="small">120R REMOVED</text>
+<rect x="1330" y="160" width="200" height="80" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2"/>
+<text x="1342" y="184" class="box-title">J2 CAR MS-CAN</text>
+<text x="1342" y="206" class="small">OBD 3(H)/11(L)</text>
+<text x="1342" y="224" class="small">or CID 19(L)/20(H)</text>
+<polyline points="1010,180 1045,180 1045,200 1080,200" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1010,210 1055,210 1055,225 1080,225" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1290,200 1330,200" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1290,225 1330,225" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1030" y="172" class="net" fill="#2471a3">CAN_TX</text>
+<text x="1030" y="238" class="net" fill="#2471a3">CAN_RX</text>
+<text x="1080" y="310" class="tiny">Авто-шина уже терминирована. Не подключать обе пары MS-CAN.</text>
+<rect x="1080" y="410" width="180" height="180" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="1092" y="434" class="box-title">U5 TXS0108E</text>
+<text x="1092" y="456" class="small">VA 3.3V / VB 5V</text>
+<text x="1092" y="474" class="small">OE 3.3V</text>
+<text x="1092" y="492" class="small">A1..A5: ESP32</text>
+<text x="1092" y="510" class="small">B1..B5: MCP2515</text>
+<rect x="1300" y="410" width="220" height="160" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2"/>
+<text x="1312" y="434" class="box-title">U6 MCP2515 + TJA1050</text>
+<text x="1312" y="456" class="small">VDD 5V</text>
+<text x="1312" y="474" class="small">8 MHz</text>
+<text x="1312" y="492" class="small">120R onboard</text>
+<text x="1312" y="510" class="small">CANH/L -&gt; K1 NO</text>
+<rect x="1560" y="410" width="180" height="160" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="1572" y="434" class="box-title">K1 DPDT relay</text>
+<text x="1572" y="456" class="small">COM -&gt; CID</text>
+<text x="1572" y="474" class="small">NC -&gt; car</text>
+<text x="1572" y="492" class="small">NO -&gt; MCP/TJA</text>
+<text x="1572" y="510" class="small">coil 5V</text>
+<rect x="1770" y="410" width="110" height="120" rx="10" fill="#fbfcfc" stroke="#2471a3" stroke-width="2"/>
+<text x="1782" y="434" class="box-title">J3</text>
+<text x="1782" y="456" class="small">CID CAN</text>
+<text x="1782" y="474" class="small">H / L</text>
+<rect x="1560" y="600" width="180" height="60" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="1572" y="624" class="box-title">Q2 + D2 + R3</text>
+<text x="1572" y="646" class="small">GPIO32 -&gt; 1k</text>
+<text x="1572" y="664" class="small">coil driver</text>
+<polyline points="1010,330 1040,330 1040,500 1080,500" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1045" y="322" class="tiny" fill="#7d3c98">SPI 3.3V (5 lines)</text>
+<polyline points="1260,500 1300,500" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1265" y="492" class="tiny" fill="#7d3c98">SPI 5V</text>
+<polyline points="1520,470 1560,470" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1525" y="462" class="tiny" fill="#2471a3">CAN H/L</text>
+<polyline points="1530,200 1540,200 1540,440 1560,440" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1545" y="430" class="tiny" fill="#2471a3">car CAN H/L -&gt; NC</text>
+<polyline points="1740,470 1770,470" fill="none" stroke="#2471a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1745" y="462" class="tiny" fill="#2471a3">COM -&gt; CID</text>
+<text x="1080" y="405" class="net" fill="#7d3c98">3.3V logic</text>
+<text x="1210" y="405" class="net" fill="#7d3c98">5V logic</text>
+<rect x="50" y="670" width="160" height="70" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="62" y="694" class="box-title">J5 ACC</text>
+<text x="62" y="716" class="small">12V</text>
+<text x="62" y="734" class="small">GND</text>
+<rect x="240" y="680" width="70" height="50" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="252" y="704" class="box-title">R1</text>
+<text x="252" y="726" class="small">10k</text>
+<rect x="340" y="660" width="160" height="100" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="352" y="684" class="box-title">U8 PC817</text>
+<text x="352" y="706" class="small">LED 1-2</text>
+<text x="352" y="724" class="small">out 4-3</text>
+<rect x="530" y="680" width="70" height="50" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="542" y="704" class="box-title">R2</text>
+<text x="542" y="726" class="small">10k</text>
+<rect x="530" y="750" width="70" height="50" rx="10" fill="#fbfcfc" stroke="#7d3c98" stroke-width="2"/>
+<text x="542" y="774" class="box-title">C6</text>
+<text x="542" y="796" class="small">100nF</text>
+<polyline points="210,705 240,705" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="310,705 340,705" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="500,690 530,690" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="505" y="682" class="tiny" fill="#7d3c98">GPIO34</text>
+<polyline points="500,775 530,775" fill="none" stroke="#7d3c98" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="825" class="tiny">ACC=12V -&gt; PC817 ON -&gt; GPIO34 LOW. Pull-up 10k to 3.3V.</text>
+<rect x="720" y="710" width="240" height="190" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2"/>
+<text x="732" y="734" class="box-title">U7 PCM5102A</text>
+<text x="732" y="756" class="small">3V3 (clean LDO)</text>
+<text x="732" y="774" class="small">GND</text>
+<text x="732" y="792" class="small">BCLK 26 / LR 25</text>
+<text x="732" y="810" class="small">DATA 27</text>
+<text x="732" y="828" class="small">MCLK -&gt; GND</text>
+<text x="732" y="846" class="small">Left / Right out</text>
+<rect x="1010" y="730" width="230" height="150" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2"/>
+<text x="1022" y="754" class="box-title">R1/R2 + C</text>
+<text x="1022" y="776" class="small">10uF -&gt; R1 10k</text>
+<text x="1022" y="794" class="small">R2 10k -&gt; GND</text>
+<text x="1022" y="812" class="small">per channel</text>
+<text x="1022" y="830" class="small">2:1 attenuator</text>
+<rect x="1300" y="730" width="220" height="100" rx="10" fill="#fbfcfc" stroke="#1e8449" stroke-width="2"/>
+<text x="1312" y="754" class="box-title">J4 RADIO AUX</text>
+<text x="1312" y="776" class="small">L / R / GND</text>
+<text x="1312" y="794" class="small">verify CD70/DVD90 pinout</text>
+<polyline points="1010,450 1040,450" fill="none" stroke="#1e8449" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1042" y="445" class="net" fill="#1e8449">I2S 26/25/27</text>
+<polyline points="700,760 720,760" fill="none" stroke="#1e8449" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="698" y="752" class="net" text-anchor="end" fill="#1e8449">I2S 26/25/27</text>
+<polyline points="960,800 1010,800" fill="none" stroke="#1e8449" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="965" y="792" class="tiny" fill="#1e8449">L/R</text>
+<polyline points="1240,800 1300,800" fill="none" stroke="#1e8449" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="365,470 365,520 680,520 680,690 700,690 700,710" fill="none" stroke="#d35400" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="720" y="950" class="tiny">PCM5102A: только 3.3V, MCLK=GND. Output ~2 Vrms; AUX usually 0.5-1 Vrms.</text>
+<text x="55" y="1045" class="small">• ПИТАНИЕ: 12V ACC -&gt; F1 1A -&gt; TVS -&gt; reverse protection -&gt; Mini360 5.0V.</text>
+<text x="55" y="1069" class="small">• Mini360 output проверить мультиметром ДО подключения ESP32.</text>
+<text x="55" y="1093" class="small">• MCP1700 3.3V — только PCM5102A; ESP32 питать от 5V.</text>
+<text x="55" y="1117" class="small">• Общая земля обязательна. Аудиоземлю вести отдельно от силовой.</text>
+<text x="55" y="1141" class="small">• CAN CAR: SN65HVD230, 120R выпаять. RS -&gt; GND.</text>
+<text x="55" y="1165" class="small">• CAN CID: MCP2515/TJA, 120R onboard + 120R дисплея = ~60R.</text>
+<text x="55" y="1189" class="small">• Level shifter TXS0108E обязателен: MCP2515 работает от 5V.</text>
+<text x="55" y="1213" class="small">• Реле K1: обесточено = CID напрямую к авто; включено = через gateway.</text>
+<text x="55" y="1237" class="small">• При сне/сбросе GPIO32=0 -&gt; реле обесточено -&gt; bypass.</text>
+<text x="960" y="1045" class="small">• ПЕРВЫЙ ЗАПУСК В АВТО: только listen-only, без 0x691/0x6C1.</text>
+<text x="960" y="1069" class="small">• Снять лог 0x6C1, 0x691, 0x501, 0x201, 0x206, 0x506.</text>
+<text x="960" y="1093" class="small">• Не подключать обе пары MS-CAN одновременно.</text>
+<text x="960" y="1117" class="small">• Проверить наличие AUX на CD70/DVD90. Если AUX нет — нужно отдельное решение.</text>
+<text x="960" y="1141" class="small">• PCM5102A: MCLK -&gt; GND; FMT/DEMP/XSMT уже заданы платой.</text>
+<text x="960" y="1165" class="small">• Аудио: 10uF + 10k/10k на канал; при клиппинге увеличить R1.</text>
+<text x="960" y="1189" class="small">• ESP32: USB и 5V одновременно не подавать (если нет диода на плате).</text>
+<text x="960" y="1213" class="small">• Корпус: антенна ESP32 не должна быть за металлом.</text>
+<text x="55" y="1290" class="tiny">Файл: docs/wiring.svg · Подробные таблицы: docs/WIRING.md</text>
+</svg>
